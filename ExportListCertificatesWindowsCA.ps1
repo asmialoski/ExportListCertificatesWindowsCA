@@ -19,7 +19,7 @@ ForEach ($cert in $filtered){
 	$CertExpireDate = Get-Date($cert."Certificate Expiration Date")
 	#$CertExpireDate.ToString("dd/MM/yyyy")
 	
-	$CertEffectiveDate = Get-Date($cert."Certificate Expiration Date")
+	$CertEffectiveDate = Get-Date($cert."Certificate Effective Date")
 	#$CertEffectiveDate.ToString("dd/MM/yyyy")
 	
 	$msg = "" + $cert."Request Disposition" + ";" + $cert."Revocation date" + ";" + $CertExpireDate.ToString("dd/MM/yyyy") + ";" + $CertEffectiveDate.ToString("dd/MM/yyyy") + ";" + $cert."Certificate Template" + ";" + $cert."Issued Common Name" + ";" + $cert."Issued Email Address"
